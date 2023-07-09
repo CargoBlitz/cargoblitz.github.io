@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rolex Server</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <section class="header">
+        <nav>
+            <a href="index.html"><img src="assets/images/logo.png"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="pricing.html">PRICING</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                    <li><a href="about.html">ABOUT US</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+
+
+        <div class="text-box">
+            <h1>A Luxurious Server</h1>
+            <p>Introducing Rolex Server, the ultimate cloud storage solution that combines advanced security, user-friendly<br> interface, seamless collaboration, lightning-fast speeds, and 24/7 customer support for a premium storage experience.</p>
+            <a href="" class="hero-btn">Check It Out Here</a>
+        </div>
+
+    </section>
+    <!--- Services --->
+     <section class="services">
+        <h1>Services We Offer</h1>
+        <p>Secure file management, seamless sharing, and reliable web hosting by Rolex Server.</p>
+
+        <div class="row">
+            <div class="service-col">
+                <h3>File Uploading and Downloading</h3>
+                <p>The Rolex server provides a robust and secure platform for file uploading and downloading. Whether you need to transfer large files, share documents with colleagues, or backup important data, Rolex offers a reliable solution. With high-speed connectivity and advanced encryption protocols, your files are protected during transit. The server supports various file formats, ensuring compatibility with different types of documents, images, videos, and more. Whether you're an individual or a business, Rolex's file uploading and downloading capabilities provide a seamless and efficient way to manage your data.</p>
+            </div>
+            <div class="service-col">
+                <h3>File Sharing</h3>
+                <p>In addition to uploading and downloading files, Rolex server offers convenient file sharing functionality. You can easily share files and folders with specific individuals or groups, granting them access to view, edit, or collaborate on the shared content. Rolex provides customizable sharing options, allowing you to set permissions, control access levels, and manage user privileges. Whether you need to collaborate on projects with remote team members, share files with clients, or distribute content to a wider audience, the Rolex server simplifies the sharing process while maintaining security and control over your files.</p>
+            </div>
+            <div class="service-col">
+                <h3>Web Hosting</h3>
+                <p>Rolex server also offers comprehensive web hosting services, providing individuals and businesses with a reliable and scalable platform to host their websites. Whether you're launching a personal blog, an e-commerce store, or a corporate website, Rolex's web hosting solutions cater to different needs and requirements. The server ensures high uptime, fast loading speeds, and secure hosting environments, allowing your website to deliver a smooth and seamless user experience. With robust infrastructure, backup options, and technical support, Rolex server's web hosting services provide a reliable foundation for your online presence.</p>
+            </div>
+        </div>
+
+    </section>
+    <!--- Servers --->
+    <section class="servers">
+        <h1>Our Server</h1>
+        <p>We have a dedicated server located in Madrid, providing reliable and efficient data management for our clients.</p>
+
+        <div class="row">
+            <div class="server-col">
+                <img src="assets/images/madridserver.jpg">
+                <div class="layer">
+                    <h3>MADRID</h3>
+                </div>
+                
+            </div>
+        </div>
+
+    </section>
+
+    <!--- Testimonials --->
+    <section class="testimonials">
+        <h1>What Our Clients Say About Us</h1>
+        <p>Discover the positive experiences and testimonials shared by our satisfied clients, highlighting the quality, reliability, and exceptional service we provide.</p>
+
+        <div class="row">
+            <div class="testimonial-col">
+                <img src="assets/images/user1.png">
+                <div>
+                    <p>Rolex Server exceeded my expectations with its impeccable performance, robust security measures, and seamless file management, providing a reliable solution for all my data hosting and sharing needs</p>
+
+                    <h3>Christine Berkley</h3>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+            </div>
+            <div class="testimonial-col">
+                <img src="assets/images/user2.png">
+                <div>
+                    <p>Choosing Rolex Server was a game-changer for my business - its exceptional reliability, lightning-fast speeds, and top-notch customer support have elevated our operations to new heights</p>
+
+                    <h3>Andrew Hubert</h3>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-o"></i>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!--- Call To Action --->
+    <section class="cta">
+        <h1>Enroll For Our Services</h1>
+        <a href="" class="hero-btn">CONTACT US</a>
+    </section>
+
+    <!--- Footer --->
+    <section class="footer">
+        <h4>About Us</h4>
+        <p> At Rolex Server, we are dedicated to providing cutting-edge server solutions, backed by a team of experienced<br> professionals, to empower individuals and businesses with secure data management, seamless file sharing, and reliable<br> web hosting services. With a commitment to excellence and customer satisfaction, we strive to deliver innovative solutions tailored to meet the unique needs of our clients</p>
+        <div class="icons">
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-instagram"></i>
+            <i class="fa fa-linkedin"></i>
+        </div>
+        <p>Made By Rolex</p>
+    </section>
+
+<script>
+
+    var navLinks = document.getElementById("navLinks");
+
+    function showMenu(){
+        navLinks.style.right = "0";
+    }
+    function hideMenu(){
+        navLinks.style.right = "-200px";
+    }
+
+</script>
+
+
+
+
+
+
+
+
+
+</body>
+</html>

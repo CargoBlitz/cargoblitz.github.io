@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing</title>
+    <link rel="stylesheet" href="stylepricing.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="pricing">
+    <section class="header">
+        <nav>
+            <a href="pricing.html"><img src="assets/images/logo.png"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="pricing.html">PRICING</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                    <li><a href="about.html">ABOUT US</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <section class="texth1">
+            <h1>Pricing</h1>
+        </section>
+    </section>
+    <div class="container">
+        <h2>Choose Your Plan</h2>
+        <div class="price-row">
+            <div class="price-col">
+                <p>Starter</p>
+                <h3>€19.99 <span>/ month</span></h3>
+                <ul>
+                    <li>1 Website</li>
+                    <li>10GB Disk Space</li>
+                    <li>No Domain Name</li>
+                    <li>Basic Web Builder</li>
+                    <li>No SSL Certificate</li>
+                    <li>Limited Support</li>
+                </ul>
+                    <button>Add To Cart</button>
+            </div>
+            <div class="price-col">
+                <p>Advanced</p>
+                <h3>€29.99 <span>/ month</span></h3>
+                <ul>
+                    <li>5 Websites</li>
+                    <li>50GB Disk Space</li>
+                    <li>Free Domain Name</li>
+                    <li>Advanced Web Builder</li>
+                    <li>SSL Certificate</li>
+                    <li>Limited Support</li>
+                </ul>
+                    <button>Add To Cart</button>
+            </div>
+            <div class="price-col">
+                <p>Premium</p>
+                <h3>€49.99 <span>/ month</span></h3>
+                <ul>
+                    <li>10 Websites</li>
+                    <li>100GB Disk Space</li>
+                    <li>Free Email Adress</li>
+                    <li>Premium Web Builder</li>
+                    <li>SSL Certificate</li>
+                    <li>24/7 Support</li>
+                </ul>
+                    <button>Add To Cart</button>
+
+            </div>
+        </div>
+    </div>
+    <!--- Footer --->
+    <section class="footer">
+        <h4>About Us</h4>
+        <p> At Rolex Server, we are dedicated to providing cutting-edge server solutions, backed by a team of experienced<br> professionals, to empower individuals and businesses with secure data management, seamless file sharing, and reliable<br> web hosting services. With a commitment to excellence and customer satisfaction, we strive to deliver innovative solutions tailored to meet the unique needs of our clients</p>
+        <div class="icons">
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-instagram"></i>
+            <i class="fa fa-linkedin"></i>
+        </div>
+        <p>Made By Rolex</p>
+    </section>
+    <script>
+        var navLinks = document.getElementById("navLinks");
+
+    function showMenu(){
+        navLinks.style.right = "0";
+    }
+    function hideMenu(){
+        navLinks.style.right = "-200px";
+    }
+    </script>
+    </section>
+</body>
+</html>
