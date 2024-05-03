@@ -15,6 +15,9 @@
     padding: 20px 30px;
     align-items: center;
 }
+.hamburger {
+    display: none;
+}
 .logo {
     width: max-content;
     min-width: 300px;
@@ -68,5 +71,16 @@
     }
     .nav-list ul li {
         display: none;   
+    }
+    .nav-list ul .hamburger {
+        display: block;
+    }
+    .hamburger {
+        display: block;
+    }
+    .hamburger img {
+        display: block;
+        width: 30px;
+        height: 30px;
     }
 }
