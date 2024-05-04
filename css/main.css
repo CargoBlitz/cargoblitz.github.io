@@ -7,7 +7,6 @@
     --bar-width: 25px;
     --bar-height: 2.8px;
     --hamburger-gap: 3px;
-    --hamburger-color : #fff;
     ---hamburger-animation: 200ms ease-in-out;
     --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2)
 }
@@ -88,7 +87,7 @@ html {
     content: "";
     width: var(--bar-width);
     height: var(--bar-height);
-    background-color: var(--hamburger-color);
+    background-color: #fff;
     border-radius: 9999px;
     transform-origin: left center;
     transition: opacity var(---hamburger-animation), width var(---hamburger-animation), rotate var(---hamburger-animation), translate var(---hamburger-animation);
