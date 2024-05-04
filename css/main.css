@@ -14,6 +14,9 @@
 html {
     scroll-behavior: smooth;
 }
+.fadein {
+    animation: fadeIn 1000ms ease-in-out forwards;
+}
 .nav {
     position: fixed;
     min-width: 100%;
@@ -171,6 +174,21 @@ html {
     .sidebar li {
         display: none;
     }
+    .sidebar li a {
+        text-decoration: none;
+        color: white;
+        font-family: 'Inter', sans-serif;
+        font-size: 16px;
+    }
+    .sidebar nav {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+        gap: 10px;
+    }
     .nav-list ul .hamburger {
         display: block;
     }
@@ -210,7 +228,6 @@ html {
 }
 .main-text h3, .main-text h1 {
     opacity: 0;
-    animation: fadeIn 1000ms ease-in-out forwards;
 }
 .main-text h3 {
     margin-top: 5px;
