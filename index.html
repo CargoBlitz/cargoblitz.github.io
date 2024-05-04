@@ -36,13 +36,22 @@
     </div>
     <div class="main section" id="main">
         <div class="main-text">
-            <h1 class="fadein">👋Hello, I'm a Website Developer</h1>
-            <h3 class="fadein">description</h3>
+            <h1 class="fadein">👋Hello, I'm a <br><span class="auto-type">Website Developer</span></h1>
+            <h3 class="fadein">Experienced website developer specialised in HTML, CSS, JavaScript, and Figma.</h3>
         </div>
     </div>
     <!--<div class="portfolio section" id="portfolio"></div>
     <div class="about section" id="about"></div>
     <div class="contact section" id="contact"></div>--->
     <script src="js/script.js"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed(".auto-type", {
+        strings: ["Website Developer", "Website Designer", "Website Developer", "Website Designer", "Website Developer", "Website Designer", "Website Developer", "Website Designer", "Website Developer", "Website Designer", "Website Developer", "Website Designer", "Website Developer", "Website Designer", "Website Developer", "Website Designer", "Website Developer", "Website Designer"],
+        typeSpeed: 150,
+        backSpeed: 150,
+        loop: false
+        });
+    </script>
 </body>
 </html>

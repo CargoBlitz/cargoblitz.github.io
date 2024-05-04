@@ -1,4 +1,4 @@
-* {
+*, body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -228,6 +228,9 @@ html {
 .main-text h3, .main-text h1 {
     opacity: 0;
 }
+.main-text h1 span {
+    color: rgb(0, 184, 230);
+}
 .main-text h3 {
     margin-top: 5px;
     color: rgba(255, 255, 255, 0.60);
@@ -237,7 +240,7 @@ html {
 }
 @media(max-width: 800px) {
     .main-text h1 {
-        font-size: 40px;
+        font-size: 30px;
     }
     .main-text h3 {
         font-size: 18px;
