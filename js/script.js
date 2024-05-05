@@ -25,3 +25,23 @@ hamburger.addEventListener('change', () => {
         }, 300);
     }
 });
+/* SCROLL ANIMATIONS */
+const sections = document.querySelectorAll('.section');
+
+function checkVisibility() {
+    const windowHeight = window.innerHeight;
+
+    sections.forEach(section => {
+        const sectionTop = section.getBoundingClientRect().top;
+        const sectionBottom = sectionTop + section.clientHeight;
+
+        if (sectionTop < windowHeight && sectionBottom >= 0) {
+            section.classList.add('animate-scroll');
+        } else {
+            section.classList.remove('animate-scroll');
+        }
+    });
+}
+window.addEventListener('scroll', checkVisibility);
+window.addEventListener('resize', checkVisibility);
+checkVisibility();

@@ -208,3 +208,11 @@ html {
     min-height: 100vh;
     height: max-content;
 }
+/*SCROLL ANIMATION*/
+.section .animate {
+    transform: translateX(-500%);
+    transition: 1s;
+}
+.section.animate-scroll .animate {
+    transform: translateX(0);
+}
