@@ -71,7 +71,7 @@ html {
     transition: 200ms all ease;
 }
 .nav-list ul li a:hover {
-    color: rgb(56, 132, 231);
+    color: #3884e7;
 }
 /* MOBILE NAV*/
 .hamburger-menu {
