@@ -73,6 +73,18 @@
     font-weight: bolder;
     font-family: 'Inter', sans-serif;
 }
+.bottom {
+    align-items: center;
+    
+    margin-bottom: 0;
+    padding-bottom: 40px;
+}
+.top {
+    margin-top: 0;
+    padding-top: 0;
+    align-items: center;
+    justify-content: center;
+}
 @media(max-width: 800px) {
     .portfolio-list {
         flex-direction: column;
@@ -85,15 +97,10 @@
         object-fit: cover;
     }
     .bottom {
-        align-items: center;
-        justify-content: end;
-        margin-bottom: 0;
         padding-bottom: 20px;
+        justify-content: end;
     }
     .top {
-        margin-top: 0;
-        padding-top: 0;
-        align-items: center;
         justify-content: start;
     }
     .portfolio-item .portfolio-item-bottom h1 {
