@@ -153,6 +153,9 @@ html {
     }
 }
 @media(max-width: 800px) {
+    .nav {
+        position: inherit;
+    }
     .logo-2 {
         display: none;
     }

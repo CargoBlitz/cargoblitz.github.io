@@ -28,8 +28,12 @@
     }
 }
 /**/
+.portfolio-item {
+    z-index: -99;
+    overflow: unset;
+}
 .portfolio-list {
-    margin-top: 25px;
+    margin-top: 70px;
     padding: 30px 45px;
     width: 100%;
     display: flex;
@@ -93,12 +97,14 @@
     .portfolio-list {
         flex-direction: column;
         gap: 20px;
+        z-index: 1 !important;
     }
     .portfolio-item .portfolio-item-top img {
         width: 320px;
         height: 170px;
         border-radius: 10px;
         object-fit: cover;
+        z-index: 1 !important;
     }
     .bottom {
         padding-bottom: 20px;
