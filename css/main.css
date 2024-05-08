@@ -163,12 +163,12 @@ html {
         font-size: 26px;
     }
     .nav-list {
-        display: none;   
+        display: none;  
     }
     .sidebar {
         top: 70px;
         position: fixed;
-        background-color: rgba(102, 102, 102, 0.9);
+        background-color: rgba(150, 150, 150, 0.6);
         border-radius: 15px;
         display: flex;
         align-items: center;
@@ -200,11 +200,6 @@ html {
     }
     .hamburger-menu {
         display: flex;
-    }
-    .hamburger img {
-        display: block;
-        width: 30px;
-        height: 30px;
     }
 }
 .section {
