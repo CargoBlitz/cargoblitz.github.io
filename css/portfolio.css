@@ -13,6 +13,9 @@
     color: white;
     font-family: 'Candal', sans-serif;
 }
+.title {
+    margin-top: 100px;
+}
 .portfolio-header h3 {
     color: rgba(255, 255, 255, 0.60);
     font-family: 'Inter', sans-serif;

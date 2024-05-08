@@ -5,6 +5,7 @@
 }
 body {
     background-color: #404040;
+    overflow-x: hidden !important;
 }
 :root {
     --bar-width: 25px;
@@ -119,21 +120,27 @@ html {
 }
 .sidebar {
     display: none;
+    transform: translateX(100%);
+    width: 100%;
+    background-color: #0a0a0a;
+    height: 346vh;
+    z-index: 15;
+    position: absolute;
 }
 @keyframes show {
     0% {
-        height: 0%;
+        transform: translateX(100%);
     }
     100% {
-        height: 150px;
+        transform: translateX(0%);
     }
 }
 @keyframes hide {
     0% {
-        height: 150px;
+        transform: translateX(0%);
     }
     100% {
-        height: 0%;
+        transform: translateX(100%);
     }
 }
 @keyframes fadeIn {
@@ -154,7 +161,7 @@ html {
 }
 @media(max-width: 800px) {
     .nav {
-        position: inherit;
+        position: relative;
     }
     .logo-2 {
         display: none;
@@ -165,41 +172,28 @@ html {
     .nav-list {
         display: none;  
     }
-    .sidebar {
-        top: 70px;
-        position: fixed;
-        background-color: rgba(150, 150, 150, 0.6);
-        border-radius: 15px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        height: 0;
-        min-width: 100%;
-    }
-    .sidebar li {
-        display: none;
-    }
-    .sidebar li a {
-        text-decoration: none;
-        color: white;
-        font-family: 'Inter', sans-serif;
-        font-size: 16px;
-    }
-    .sidebar nav {
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        flex-direction: column;
-        gap: 10px;
-    }
     .nav-list ul .hamburger {
         display: block;
     }
     .hamburger-menu {
         display: flex;
+    }
+    .sidebar ul {
+        margin-top: 15px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        list-style: none;
+        gap: 5px;
+    }
+    .sidebar ul li a {
+        color: white;
+        text-decoration: none;
+        font-family: 'Inter', sans-serif;
+    }
+    .sidebar ul li a:active {
+        color: #3884e7;
     }
 }
 .section {
