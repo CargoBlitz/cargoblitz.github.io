@@ -188,6 +188,8 @@ html {
         gap: 5px;
     }
     .sidebar ul li a {
+        font-weight: 500;
+        font-size: 16px;
         color: white;
         text-decoration: none;
         font-family: 'Inter', sans-serif;
