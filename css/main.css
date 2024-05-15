@@ -204,10 +204,12 @@ html {
     height: max-content;
 }
 /*SCROLL ANIMATION*/
-.section .animate {
-    transform: translateX(-500%);
-    transition: 1s;
-}
-.section.animate-scroll .animate {
-    transform: translateX(0);
+@media(min-width: 800px) {
+    .scroll-item {
+        transform: translateX(400%) !important;
+        transition: transform 500ms ease;
+    }
+    .scroll-item.show {
+        transform: translateX(0%) !important;
+    }
 }

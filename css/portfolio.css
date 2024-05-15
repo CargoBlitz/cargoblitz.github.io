@@ -1,6 +1,9 @@
 :root {
     --animation: all 200ms ease;
 }
+.portfolio {
+    transform: translateX(0%);
+}
 .portfolio-header {
     display: flex;
     flex-direction: column;
@@ -12,9 +15,6 @@
     font-size: 48px;
     color: white;
     font-family: 'Candal', sans-serif;
-}
-.title {
-    margin-top: 100px;
 }
 .portfolio-header h3 {
     color: rgba(255, 255, 255, 0.60);

@@ -15,22 +15,19 @@ hamburger.addEventListener('change', () => {
     }
 });
 /* SCROLL ANIMATIONS */
-const sections = document.querySelectorAll('.section');
+const items = document.querySelectorAll('.scroll-item')
 
-function checkVisibility() {
-    const windowHeight = window.innerHeight;
+window.addEventListener('scroll', checkItems)
 
-    sections.forEach(section => {
-        const sectionTop = section.getBoundingClientRect().top;
-        const sectionBottom = sectionTop + section.clientHeight;
-
-        if (sectionTop < windowHeight && sectionBottom >= 0) {
-            section.classList.add('animate-scroll');
-        } else {
-            section.classList.remove('animate-scroll');
+function checkItems() {
+    const triggerBottom = window.innerHeight / 5 * 4;
+    items.forEach(item => {
+        const itemTop = item.getBoundingClientRect().top;
+        if(itemTop < triggerBottom) {
+            item.classList.add('show');
+        }
+        else {
+            item.classList.remove('show');
         }
     });
 }
-window.addEventListener('scroll', checkVisibility);
-window.addEventListener('resize', checkVisibility);
-checkVisibility();
