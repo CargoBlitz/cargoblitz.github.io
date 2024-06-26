@@ -31,8 +31,7 @@ html {
     align-items: center;
 }
 .logo {
-    width: max-content;
-    min-width: 300px;
+    width: 100%;
 }
 .logo-1 {
     color: #FF3939;
@@ -75,90 +74,6 @@ html {
 .nav-list ul li a:hover {
     color: #3884e7;
 }
-/* MOBILE NAV*/
-/*.hamburger-menu {
-    --x-width: calc(var(--hamburger-height) * 1.41421356237);
-    display: none;
-    width: 100%;
-    align-items: end;
-    flex-direction: column;
-    gap: var(--hamburger-gap);
-    z-index: 100;
-    cursor: pointer;
-}
-.hamburger-menu::before,
-.hamburger-menu::after,
-.hamburger-menu input {
-    content: "";
-    width: var(--bar-width);
-    height: var(--bar-height);
-    background-color: #fff;
-    border-radius: 9999px;
-    transform-origin: left center;
-    transition: opacity var(---hamburger-animation), width var(---hamburger-animation), rotate var(---hamburger-animation), translate var(---hamburger-animation);
-}
-.hamburger-menu input {
-    appearance: none;
-    padding: 0;
-    margin: 0;
-    outline: none;
-    pointer-events: none;
-}
-.hamburger-menu:has(input:checked)::before {
-    rotate: 45deg;
-    width: var(--x-width);
-    translate: 0 calc(var(--bar-height) / -2);
-}
-.hamburger-menu:has(input:checked)::after {
-    rotate: -45deg;
-    width: var(--x-width);
-    translate: 0 calc(var(--bar-height) / 2);
-}
-.hamburger-menu input:checked {
-    opacity: 0;
-    width: 0;
-}
-.sidebar {
-    display: none;
-    transform: translateX(100%);
-    width: 100%;
-    background-color: #0a0a0a;
-    height: 346vh;
-    z-index: 15;
-    position: absolute;
-}
-@keyframes show {
-    0% {
-        transform: translateX(100%);
-    }
-    100% {
-        transform: translateX(0%);
-    }
-}
-@keyframes hide {
-    0% {
-        transform: translateX(0%);
-    }
-    100% {
-        transform: translateX(100%);
-    }
-}
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 100%;
-    }
-}
-@keyframes fadeOut {
-    0% {
-        opacity: 100%;
-    }
-    100% {
-        opacity: 0%;
-    }
-}*/
 @media(max-width: 800px) {
     .nav {
         position: relative;
@@ -247,9 +162,9 @@ html {
 .bottom-bar-mobile ul li .active::after {
     content: "";
     position: absolute;
-    left: -15%;
+    left: -10%;
     bottom: -5px;
-    width: 130%;
+    width: 120%;
     height: 2px;
     background-color: #1769FF;
     border-radius: 10px;
