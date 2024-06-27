@@ -8,6 +8,11 @@
     --mobile-bottomnav-li-color: #282828;
     --mobile-bottomnav-li-color-active: #1769FF;
     --mobile-bottomnav-stroke-color: #1769FF;
+    /*PORTFOLIO SECTION*/
+    --bg-card: #E0E0E0;
+    --bg-card-content: #C0C0C0;
+    --bg-card-hover: #CCCCCC;
+    --bg-card-content-hover: #B1B1B1;
 }
 .darkmode {
     --background-color: #222222;
@@ -19,6 +24,11 @@
     --mobile-bottomnav-li-color: #FFFFFF;
     --mobile-bottomnav-li-color-active: #1769FF;
     --mobile-bottomnav-stroke-color: #1769FF;
+    /*PORTFOLIO SECTION*/
+    --bg-card: #141414;
+    --bg-card-content: #272727;
+    --bg-card-hover: #000000;
+    --bg-card-content-hover: #1A1A1A;
 }
 *, body {
     margin: 0;
