@@ -17,7 +17,8 @@
     text-align: center;
 }
 .main-text h1 {
-    color: white;
+    color: var(--main-text-color);
+    transition: color 150ms ease;
     font-size: 48px;
     font-family: 'Candal', sans-serif;
 }
@@ -29,7 +30,8 @@
 }
 .main-text h3 {
     margin-top: 5px;
-    color: rgba(255, 255, 255, 0.60);
+    color: var(--p-text-color);
+    transition: color 150ms ease;
     font-family: 'Inter', sans-serif;
     font-weight: lighter;
     font-size: 20px;

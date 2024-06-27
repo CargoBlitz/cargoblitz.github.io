@@ -32,46 +32,46 @@ function checkItems() {
     });
 }
 /* DARK / LIGHT MODES */
-function switchMode() {
-    const body = document.body;
-    const icon = document.querySelector('.dark-light-mode i');
-
-    if (body.classList.contains('light-mode')) {
-        body.classList.remove('light-mode');
-        body.classList.add('dark-mode');
-        icon.classList.remove('fa-sun');
-        icon.classList.add('fa-moon');
-    } else {
-        body.classList.remove('dark-mode');
-        body.classList.add('light-mode');
-        icon.classList.remove('fa-moon');
-        icon.classList.add('fa-sun');
-    }
+let darkMode = localStorage.getItem('darkMode');
+const darkModeToggle = document.querySelector('#dark-mode-toggle');
+const toggleIcon = document.querySelector('#toggleIcon');
+const enableDarkMode = () => {
+    document.body.classList.add("darkmode");
+    localStorage.setItem('darkMode', 'enabled');
+    toggleIcon.classList.add('fa-sun');
+    toggleIcon.classList.remove('fa-moon');
+    toggleIcon.style.color = 'white';
+}
+const disableDarkMode = () => {
+    document.body.classList.remove("darkmode");
+    localStorage.setItem('darkMode', null);
+    toggleIcon.classList.remove('fa-sun');
+    toggleIcon.classList.add('fa-moon');
+    toggleIcon.style.color = 'black';
+}
+if(darkMode === 'enabled') {
+    enableDarkMode();
 }
 
-// Set default mode to light mode on page load
-document.addEventListener('DOMContentLoaded', () => {
-    document.body.classList.add('light-mode');
-});
+darkModeToggle.addEventListener('click', () => {
+    darkMode = localStorage.getItem('darkMode')
+    if(darkMode !== 'enabled') {
+        enableDarkMode();
+    }
+    else if(darkMode === 'enabled') {
+        disableDarkMode()
+    }
+})
 // Bottom NAV MOBILE
 document.addEventListener('DOMContentLoaded', () => {
     const navLinks = document.querySelectorAll('.bottom-bar-mobile ul li a');
-
-    // Function to remove active class from all links
     const removeActiveClasses = () => {
         navLinks.forEach(link => link.classList.remove('active'));
     };
-
-    // Handle click event on navigation links
     navLinks.forEach(link => {
         link.addEventListener('click', (event) => {
-            // Prevent the default anchor click behavior
             event.preventDefault();
-
-            // Remove active class from all links
             removeActiveClasses();
-
-            // Add active class to the clicked link
             link.classList.add('active');
         });
     });
