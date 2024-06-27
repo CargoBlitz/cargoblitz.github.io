@@ -98,9 +98,6 @@ html {
     color: #3884e7;
 }
 @media(max-width: 800px) {
-    .nav {
-        position: relative;
-    }
     .logo-2 {
         display: none;
     }
@@ -190,4 +187,8 @@ html {
     .dark-light-mode {
         display: block;
     }
+}
+/*FIXED NAV BAR*/
+.nav {
+    position: fixed;
 }
