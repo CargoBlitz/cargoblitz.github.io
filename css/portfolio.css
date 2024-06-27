@@ -13,14 +13,26 @@
     flex-wrap: wrap;
     gap: 15px;
     margin-top: 50px;
+    margin-bottom: 50px;
 }
 .card {
     width: 30%;
     height: max-content;
-    background-color: #141414;
+    background-color: var(--bg-card);
     overflow: hidden;
     padding: 15px;
     border-radius: 15px;
+    transition: background-color 200ms ease;
+}
+.card:hover {
+    background-color: var(--bg-card-hover);
+    border: 1px solid var(--main-text-color);
+}
+.card:hover .card-content .top img {
+    transform: rotate(-45deg);
+}
+.card:hover .card-content {
+    background-color: var(--bg-card-content-hover);
 }
 .card img {
     width: 100%;
@@ -34,7 +46,8 @@
     margin-top: 8px;
     padding: 8px;
     border-radius: 5px;
-    background-color: #272727;
+    background-color: var(--bg-card-content);
+    transition: background-color 200ms ease;
 }
 .card-content h1 {
     color: var(--main-text-color);
@@ -51,12 +64,28 @@
 .card-content img {
     height: 30px;
     width: 30px;
+    transition: transform 200ms ease;
+    cursor: pointer;
 }
 @media(max-width: 800px) {
     .card-content {
         flex-direction: column;
     }
+    .card-content h1 {
+        font-size: 20px;
+    }
+    .card-content p {
+        font-size: 15px;
+    }
     .card {
         width: 90%;
+    }
+    .card-container {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .card-content img {
+        height: 20px;
+        width: 20px;
     }
 }
