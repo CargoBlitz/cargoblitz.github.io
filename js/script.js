@@ -1,13 +1,18 @@
 /* DARK / LIGHT MODES */
 let darkMode = localStorage.getItem('darkMode');
 const darkModeToggle = document.querySelector('#dark-mode-toggle');
+const darkModeToggleDesktop = document.querySelector('#dark-mode-toggle-desktop');
 const toggleIcon = document.querySelector('#toggleIcon');
+const toggleIconDesktop = document.querySelector('#toggleIconDesktop');
 const enableDarkMode = () => {
     document.body.classList.add("darkmode");
     localStorage.setItem('darkMode', 'enabled');
     toggleIcon.classList.add('fa-sun');
     toggleIcon.classList.remove('fa-moon');
     toggleIcon.style.color = 'white';
+    toggleIconDesktop.classList.add('fa-sun');
+    toggleIconDesktop.classList.remove('fa-moon');
+    toggleIconDesktop.style.color = 'white';
 }
 const disableDarkMode = () => {
     document.body.classList.remove("darkmode");
@@ -15,12 +20,24 @@ const disableDarkMode = () => {
     toggleIcon.classList.remove('fa-sun');
     toggleIcon.classList.add('fa-moon');
     toggleIcon.style.color = 'black';
+    toggleIconDesktop.classList.remove('fa-sun');
+    toggleIconDesktop.classList.add('fa-moon');
+    toggleIconDesktop.style.color = 'black';
 }
 if(darkMode === 'enabled') {
     enableDarkMode();
 }
 
 darkModeToggle.addEventListener('click', () => {
+    darkMode = localStorage.getItem('darkMode')
+    if(darkMode !== 'enabled') {
+        enableDarkMode();
+    }
+    else if(darkMode === 'enabled') {
+        disableDarkMode()
+    }
+})
+darkModeToggleDesktop.addEventListener('click', () => {
     darkMode = localStorage.getItem('darkMode')
     if(darkMode !== 'enabled') {
         enableDarkMode();
