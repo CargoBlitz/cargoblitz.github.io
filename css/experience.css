@@ -17,8 +17,12 @@
     background-color: var(--exp-item-bg);
     padding: 25px 30px;
     border-radius: 10px;
+    transition: all 200ms ease;
 }
-.experience-item h1 {
+.experience-item:hover {
+    background-color: var(--exp-item-bg-hover);
+}
+.experience-item .title {
     color: #00B8E6;
     font-family: 'Inter', sans-serif;
     margin-bottom: 5px;
@@ -35,6 +39,7 @@
     padding: 8px;
     border-radius: 18px;
     border: none;
+    cursor: pointer;
 }
 @media(max-width: 800px) {
     .experience-list {
@@ -46,4 +51,48 @@
     .experience-item h1 {
         font-size: 24px;
     }
+}
+
+
+.dialog {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    justify-content: center;
+    align-items: center;
+    transform: translate(-50%, -50%);
+}
+
+.dialog-content {
+    background-color: var(--dialog-bgcolor);
+    position: relative;
+    padding: 30px;
+    border-radius: 10px;
+}
+.dialog-content .top {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2px;
+}
+.dialog-content .top h1 {
+    width: 100%;
+    color: var(--main-text-color);
+    font-size: 24px;
+    font-family: var(--inter);
+}
+.dialog-content .top .close-button {
+    color: var(--main-text-color);
+    font-size: 1.75rem;
+    cursor: pointer;
+}
+.dialog-content .description {
+    color: var(--p-text-color);
+    font-family: var(--inter);
+    font-size: 16px;
+}
+.dialog-content .p {
+    color: var(--p-text-color-lighter);
+    margin-top: 12px;
+    font-size: 15px;
 }

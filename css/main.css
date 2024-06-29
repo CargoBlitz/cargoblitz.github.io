@@ -1,8 +1,10 @@
 :root {
+    --inter: 'Inter', sans-serif;
     --background-color: #FFFFFF;
     --main-text-color: #000000;
     --text-color-blue: #00B8E6;
     --p-text-color: #000000cc;
+    --p-text-color-lighter: #00000099;
     --nav-color: #e9e9e9;
     --mobile-bottomnav-bgcolor: #EDEDED;
     --mobile-bottomnav-li-color: #282828;
@@ -15,12 +17,14 @@
     --bg-card-content-hover: #B1B1B1;
     /*EXPERIENCE SECTION*/
     --exp-item-bg: #E0E0E0;
+    --dialog-bgcolor: #CDCDCD;
 }
 .darkmode {
     --background-color: #222222;
     --main-text-color: #FFFFFF;
     --text-color-blue: #00B8E6;
     --p-text-color: #ffffffcc;
+    --p-text-color-lighter: #ffffff99;
     --nav-color: #1E1E1E;
     --mobile-bottomnav-bgcolor: #282828;
     --mobile-bottomnav-li-color: #FFFFFF;
@@ -33,6 +37,8 @@
     --bg-card-content-hover: #1A1A1A;
     /*EXPERIENCE SECTION*/
     --exp-item-bg: #15120D;
+    --exp-item-bg-hover: #1d1913;
+    --dialog-bgcolor: #1B1B1B;
 }
 *, body {
     margin: 0;

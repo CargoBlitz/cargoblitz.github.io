@@ -122,3 +122,38 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     navLinks[0].classList.add('active');
 });
+
+
+
+//DIALOG
+
+// Select all buttons with class 'cta'
+const buttons = document.querySelectorAll('.cta');
+
+// Add click event listener to each button
+buttons.forEach(button => {
+    button.addEventListener('click', function() {
+        // Find the closest dialog relative to the button clicked
+        const dialog = this.closest('.experience-item').querySelector('.dialog');
+        dialog.style.display = 'flex';
+    });
+});
+
+// Add click event listener to close buttons
+const closeButtons = document.querySelectorAll('.close-button');
+closeButtons.forEach(closeButton => {
+    closeButton.addEventListener('click', function() {
+        const dialog = this.closest('.dialog');
+        dialog.style.display = 'none';
+    });
+});
+
+// Optional: close dialog when clicking outside of it
+window.addEventListener('click', function(event) {
+    const dialogs = document.querySelectorAll('.dialog');
+    dialogs.forEach(dialog => {
+        if (event.target === dialog) {
+            dialog.style.display = 'none';
+        }
+    });
+});
