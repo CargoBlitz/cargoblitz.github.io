@@ -28,16 +28,22 @@
     font-family: 'Inter', sans-serif;
 }
 .experience-item .cta {
-    margin-top: 5px;
+    margin-top: 8px;
     background-color: #00B8E6;
     color: white;
     font-family: 'Inter', sans-serif;
-    padding: 5px;
-    border-radius: 15px;
+    padding: 8px;
+    border-radius: 18px;
     border: none;
 }
 @media(max-width: 800px) {
     .experience-list {
         padding: 0 25px;
+    }
+    .experience-item p {
+        font-size: 14px;
+    }
+    .experience-item h1 {
+        font-size: 24px;
     }
 }
