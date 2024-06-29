@@ -62,6 +62,7 @@
     justify-content: center;
     align-items: center;
     transform: translate(-50%, -50%);
+    transition: opacity 0.3s ease-in-out;
 }
 @media(max-width: 800px) {
     .dialog {
@@ -73,6 +74,7 @@
     position: relative;
     padding: 30px;
     border-radius: 10px;
+    transition: opacity 0.3s ease-in-out;
 }
 .dialog-content .top {
     display: flex;
@@ -99,4 +101,18 @@
     color: var(--p-text-color-lighter);
     margin-top: 12px;
     font-size: 15px;
+}
+.dialog-content .button-class .contact {
+    background-color: #00B8E6;
+    color: white;
+    margin-top: 12px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.dialog-content .button-class {
+    width: 100%;
+    display: flex;
+    justify-content: end;
 }
