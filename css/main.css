@@ -10,9 +10,11 @@
     --mobile-bottomnav-stroke-color: #1769FF;
     /*PORTFOLIO SECTION*/
     --bg-card: #E0E0E0;
-    --bg-card-content: #C0C0C0;
+    --bg-card-content: #cecece;
     --bg-card-hover: #CCCCCC;
     --bg-card-content-hover: #B1B1B1;
+    /*EXPERIENCE SECTION*/
+    --exp-item-bg: #E0E0E0;
 }
 .darkmode {
     --background-color: #222222;
@@ -29,6 +31,8 @@
     --bg-card-content: #272727;
     --bg-card-hover: #000000;
     --bg-card-content-hover: #1A1A1A;
+    /*EXPERIENCE SECTION*/
+    --exp-item-bg: #15120D;
 }
 *, body {
     margin: 0;
