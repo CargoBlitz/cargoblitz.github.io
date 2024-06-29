@@ -17,6 +17,7 @@
     --bg-card-content-hover: #B1B1B1;
     /*EXPERIENCE SECTION*/
     --exp-item-bg: #E0E0E0;
+    --exp-item-bg-hover: #d6d6d6;
     --dialog-bgcolor: #CDCDCD;
 }
 .darkmode {
