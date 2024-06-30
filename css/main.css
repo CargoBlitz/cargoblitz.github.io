@@ -21,7 +21,7 @@
     --dialog-bgcolor: #CDCDCD;
 }
 .darkmode {
-    --background-color: #222222;
+    --background-color: #202020;
     --main-text-color: #FFFFFF;
     --text-color-blue: #00B8E6;
     --p-text-color: #ffffffcc;
@@ -37,8 +37,8 @@
     --bg-card-hover: #000000;
     --bg-card-content-hover: #1A1A1A;
     /*EXPERIENCE SECTION*/
-    --exp-item-bg: #15120D;
-    --exp-item-bg-hover: #1d1913;
+    --exp-item-bg: #121212;
+    --exp-item-bg-hover: #050505;
     --dialog-bgcolor: #1B1B1B;
 }
 *, body {
