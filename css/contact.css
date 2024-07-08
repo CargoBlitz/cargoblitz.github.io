@@ -1,7 +1,7 @@
 .contact-screen {
     display: flex;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
 }
 .contact-info .middle {
     display: flex;
@@ -187,6 +187,7 @@ input[type=number] {
         width: 90%;
         align-items: start;
         justify-content: center;
+        margin-bottom: 100px;
     }
     .contact-form input {
         width: 100%;
@@ -196,6 +197,7 @@ input[type=number] {
         width: 100% !important;
     }
     .contact-form .container {
+        height: calc(100% + 80px);
         display: flex;
         width: 100%;
         flex-direction: column;
