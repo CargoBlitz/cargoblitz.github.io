@@ -14,6 +14,10 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Candal&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter&display=swap">
     <!--FONTS END-->
+    <!--SEO-->
+    <meta name="description" content="Mauro De Smet is an experienced website developer specializing in HTML, CSS, JavaScript, and Figma. Explore his portfolio and contact him for your website needs.">
+    <meta name="keywords" content="website developer, HTML, CSS, JavaScript, Figma, portfolio, contact">
+    <meta name="author" content="Mauro De Smet">
 </head>
 <body>
     <div class="nav">
@@ -176,28 +180,29 @@
                     </div>
                 </div>
                 <div class="bottom">
-                    <div class="logo-div">
+                    <!--<div class="logo-div">
                         <img src="img/instagram.svg" class="logo-media">
-                    </div>
+                    </div>-->
                     <div class="logo-div">
-                        <img src="img/discord.svg" class="logo-media">
+                        <img src="img/discord.svg" class="logo-media" id="discord">
                     </div>
                 </div>
             </div>
             
             
             <div class="contact-form">
-                <form class="container">
+                <form class="container" action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="6a22dc8e-2302-4dee-a620-1a7a153de48d">
                     <div class="name">
                         <div class="firstName">
                             <label for="firstName" class="custom-field">
-                                <input type="text" id="firstName" required>
+                                <input type="text" id="firstName" required name="firstName">
                                 <span class="placeholder">First Name</span>
                             </label>
                         </div>
                         <div class="lastName">
                             <label for="lastName" class="custom-field">
-                                <input type="text" id="lastName" required>
+                                <input type="text" id="lastName" required name="lastName">
                                 <span class="placeholder">Last Name</span>
                             </label>
                         </div>
@@ -205,20 +210,20 @@
                     <div class="email-phone">
                         <div class="email">
                             <label for="email" class="custom-field">
-                                <input type="email" id="email" required>
+                                <input type="email" id="email" required name="email">
                                 <span class="placeholder">Email</span>
                             </label>
                         </div>
                         <div class="phone">
                             <label for="phoneNumber" class="custom-field">
-                                <input type="number" id="phoneNumber" required>
+                                <input type="number" id="phoneNumber" required name="phoneNumber">
                                 <span class="placeholder">Phone Number</span>
                             </label>
                         </div>
                     </div>
                     <div class="message">
                         <label for="message" class="custom-field">
-                            <input type="text" id="message" required>
+                            <input type="text" id="message" required name="Message">
                             <span class="placeholder">Message</span>
                         </label>
                     </div>

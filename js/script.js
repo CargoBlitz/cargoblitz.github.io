@@ -157,6 +157,11 @@ function getBelgiumTimeZone() {
       return "Unknown Time Zone";
     }
 };
-  const textTime = getBelgiumTimeZone();
-  const textTimeEl = document.getElementById('timezone');
-  textTimeEl.textContent = textTime;
+const textTime = getBelgiumTimeZone();
+const textTimeEl = document.getElementById('timezone');
+textTimeEl.textContent = textTime;
+//CONTACT SECTION FUNCTIONALITY
+const discordOpen = document.getElementById('discord');
+discordOpen.addEventListener('click', function() {
+    window.location.href = 'https://discord.com/invite/xPpfPDBH';
+})
