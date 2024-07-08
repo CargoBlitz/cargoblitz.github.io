@@ -59,6 +59,7 @@
     position: fixed;
     top: 50%;
     left: 50%;
+    z-index: 100;
     justify-content: center;
     align-items: center;
     transform: translate(-50%, -50%);

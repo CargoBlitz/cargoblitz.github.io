@@ -138,6 +138,7 @@ buttons.forEach(button => {
         const dialog = this.closest('.experience-item').querySelector('.dialog');
         dialog.style.display = 'flex';
         openDialog = dialog;
+        document.body.style.overflow = 'hidden';
     });
 });
 
@@ -146,6 +147,24 @@ closeButtons.forEach(closeButton => {
     closeButton.addEventListener('click', function() {
         const dialog = this.closest('.dialog');
         dialog.style.display = 'none';
+        document.body.style.overflow = '';
         openDialog = null;
     });
 });
+// GET TIME
+function getBelgiumTimeZone() {
+    const now = new Date();
+    const standardOffset = 60;
+    const summerOffset = 120;
+    const currentOffset = now.getTimezoneOffset();
+    if (currentOffset === -standardOffset) {
+      return "Central European Time (CET) - UTC+1";
+    } else if (currentOffset === -summerOffset) {
+      return "Central European Summer Time (CEST) - UTC+2";
+    } else {
+      return "Unknown Time Zone";
+    }
+};
+  const textTime = getBelgiumTimeZone();
+  const textTimeEl = document.getElementById('timezone');
+  textTimeEl.textContent = textTime;

@@ -19,6 +19,9 @@
     --exp-item-bg: #E0E0E0;
     --exp-item-bg-hover: #d6d6d6;
     --dialog-bgcolor: #CDCDCD;
+    /*CONTACT SECTION*/
+    --input-bg: #dadada;
+    --plc-c: #222;
 }
 .darkmode {
     --background-color: #202020;
@@ -40,6 +43,9 @@
     --exp-item-bg: #121212;
     --exp-item-bg-hover: #050505;
     --dialog-bgcolor: #1B1B1B;
+    /*CONTACT SECTION*/
+    --input-bg: #f2f2f2;
+    --plc-c: #dddddd;
 }
 *, body {
     margin: 0;
@@ -102,6 +108,12 @@ html {
 }
 .nav-list ul li label {
     cursor: pointer;
+}
+.nav-list ul li label i {
+    transition: all 200ms ease;
+}
+.nav-list ul li label i:hover {
+    color: #3884e7 !important;
 }
 .nav-list ul {
     list-style: none;
