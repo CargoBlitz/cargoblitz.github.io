@@ -11,10 +11,10 @@
     --mobile-bottomnav-li-color-active: #1769FF;
     --mobile-bottomnav-stroke-color: #1769FF;
     /*PORTFOLIO SECTION*/
-    --bg-card: #E0E0E0;
-    --bg-card-content: #cecece;
-    --bg-card-hover: #CCCCCC;
-    --bg-card-content-hover: #B1B1B1;
+    --bg-card: #e6e6e6;
+    --bg-card-content: #ffffff;
+    --bg-card-hover: #cccccc;
+    --bg-card-content-hover: #e0e0e0;
     /*EXPERIENCE SECTION*/
     --exp-item-bg: #E0E0E0;
     --exp-item-bg-hover: #d6d6d6;

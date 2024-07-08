@@ -4,7 +4,11 @@ const darkModeToggle = document.querySelector('#dark-mode-toggle');
 const darkModeToggleDesktop = document.querySelector('#dark-mode-toggle-desktop');
 const toggleIcon = document.querySelector('#toggleIcon');
 const toggleIconDesktop = document.querySelector('#toggleIconDesktop');
+const arrows = document.querySelectorAll('.arrow')
 const enableDarkMode = () => {
+    arrows.forEach(arrow => {
+        arrow.style.filter = "";
+    });
     document.body.classList.add("darkmode");
     localStorage.setItem('darkMode', 'enabled');
     toggleIcon.classList.add('fa-sun');
@@ -15,6 +19,9 @@ const enableDarkMode = () => {
     toggleIconDesktop.style.color = 'white';
 }
 const disableDarkMode = () => {
+    arrows.forEach(arrow => {
+        arrow.style.filter = "invert(100%)";
+    });
     document.body.classList.remove("darkmode");
     localStorage.setItem('darkMode', null);
     toggleIcon.classList.remove('fa-sun');
@@ -26,6 +33,15 @@ const disableDarkMode = () => {
 }
 if(darkMode === 'enabled') {
     enableDarkMode();
+}
+if(darkMode === 'enabled') {
+    arrows.forEach(arrow => {
+        arrow.style.filter = "";
+    });
+} else {
+    arrows.forEach(arrow => {
+        arrow.style.filter = "invert(100%)";
+    });
 }
 
 darkModeToggle.addEventListener('click', () => {
