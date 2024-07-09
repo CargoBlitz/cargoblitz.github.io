@@ -77,8 +77,14 @@
 .contact-info .bottom .logo-div .logo-media {
     transition: filter 300ms ease;
 }
-.contact-info .bottom .logo-div:hover .logo-media {
+.contact-info .bottom .logo-div:hover #discord {
     filter: invert(100%);
+}
+.contact-info .bottom .logo-div #email {
+    filter: invert(100%);
+}
+.contact-info .bottom .logo-div:hover #email {
+    filter: invert(0%);
 }
 .contact-info .bottom img {
     width: 30px;

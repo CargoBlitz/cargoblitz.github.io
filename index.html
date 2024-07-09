@@ -45,7 +45,7 @@
             <h3 class="fadein">Experienced website developer specialised in HTML, CSS, JavaScript, and Figma.</h3>
         </div>
         <div class="cta-btn">
-            <button class="fadein">Let's Create Your Website!</button>
+            <a href="#contact"><button class="fadein">Let's Create Your Website!</button></a>
         </div>
     </section>
     <section class="portfolio section" id="portfolio">
@@ -54,7 +54,7 @@
             <h3 class="fadein">These are the projects I have completed.</h3>
         </div>
         <div class="card-container">
-            <div class="card">
+            <div class="card" id="project1">
                 <div class="img-container">
                     <img src="img/project-1.png" alt="Project 1">
                 </div>
@@ -95,12 +95,30 @@
     <section class="experience section" id="experience">
         <div class="main-text">
             <h1 class="fadein">About Me</h1>
-            <h3 class="fadein">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc consequat.</h3>
+            <h3 class="fadein">Curious to know more about me?</h3>
         </div>
         <div class="experience-list">
             <div class="experience-item">
+                <h1 class="title">React</h1>
+                <p>After learning HTML and JavaScript, I mastered React to excel in Next.js and become a full-stack web developer.</p>
+                <button class="cta" id="cta">Learn More -></button>
+                <div id="dialog" class="dialog">
+                    <div class="dialog-content">
+                        <div class="top">
+                            <h1>React</h1>
+                            <span class="close-button" id="closeDialogButton">&times;</span>
+                        </div>
+                        <p class="description">I began learning React in 2024 after gaining proficiency in JavaScript and HTML.</p>
+                        <p class="p">I have hands-on experience in React, having developed projects like a blog with dynamic content, a fully functional contact form with validation, and user authentication features for sign-up and login. I've also successfully converted an HTML website into a React application from scratch, without relying on conversion tools. These experiences have solidified my understanding of React's fundamentals and its application in building interactive and efficient web interfaces.</p>
+                        <div class="button-class">
+                            <button class="contact contactmebtn">Contact Me</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="experience-item">
                 <h1 class="title">HTML</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc consequat.</p>
+                <p>I learned HTML first to start my web development journey before mastering React and Next.js.</p>
                 <button class="cta" id="cta">Learn More -></button>
                 <div id="dialog" class="dialog">
                     <div class="dialog-content">
@@ -111,14 +129,14 @@
                         <p class="description">Description</p>
                         <p class="p">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
                         <div class="button-class">
-                            <button class="contact">Contact Me</button>
+                            <button class="contact contactmebtn">Contact Me</button>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="experience-item">
                 <h1 class="title">CSS</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc consequat.</p>
+                <p>I learned CSS to enhance my web design skills, creating visually appealing websites effortlessly.</p>
                 <button class="cta" id="cta">Learn More -></button>
                 <div id="dialog" class="dialog">
                     <div class="dialog-content">
@@ -129,14 +147,14 @@
                         <p class="description">Description</p>
                         <p class="p">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
                         <div class="button-class">
-                            <button class="contact">Contact Me</button>
+                            <button class="contact contactmebtn">Contact Me</button>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="experience-item">
                 <h1 class="title">JS</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc consequat.</p>
+                <p>I learned JavaScript to bring interactive features to my websites, making them dynamic and engaging.</p>
                 <button class="cta" id="cta">Learn More -></button>
                 <div id="dialog" class="dialog">
                     <div class="dialog-content">
@@ -147,7 +165,7 @@
                         <p class="description">Description</p>
                         <p class="p">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
                         <div class="button-class">
-                            <button class="contact">Contact Me</button>
+                            <button class="contact contactmebtn">Contact Me</button>
                         </div>
                     </div>
                 </div>
@@ -180,9 +198,9 @@
                     </div>
                 </div>
                 <div class="bottom">
-                    <!--<div class="logo-div">
-                        <img src="img/instagram.svg" class="logo-media">
-                    </div>-->
+                    <div class="logo-div">
+                        <img src="img/envelope-line-icon.svg" class="logo-media" id="email">
+                    </div>
                     <div class="logo-div">
                         <img src="img/discord.svg" class="logo-media" id="discord">
                     </div>

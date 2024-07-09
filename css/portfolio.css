@@ -27,6 +27,7 @@
 .card:hover {
     background-color: var(--bg-card-hover);
     border: 1px solid var(--main-text-color);
+    cursor: pointer;
 }
 .card:hover .card-content .top img {
     transform: rotate(-45deg);

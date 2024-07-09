@@ -160,6 +160,23 @@ function getBelgiumTimeZone() {
 const textTime = getBelgiumTimeZone();
 const textTimeEl = document.getElementById('timezone');
 textTimeEl.textContent = textTime;
+//PORTFOLIO SECTION FUNCTIONALITY
+const project1 = document.getElementById('project1');
+project1.addEventListener('click', () => {
+    window.location.href = 'https://rolex-server-git-main-maurodesmets-projects.vercel.app/index.html';
+})
+// ABOUT SECTION FUNCTIONALITY
+const aboutButtons = document.querySelectorAll('.contactmebtn');
+aboutButtons.forEach(aboutbtn => {
+    aboutbtn.addEventListener('click', function() {
+        const dialog = this.closest('.dialog');
+        dialog.style.display = 'none';
+        document.body.style.overflow = '';
+        openDialog = null;
+        var contactSection = document.getElementById('contact');
+        contactSection.scrollIntoView({ behavior: 'smooth' });
+    })
+})
 //CONTACT SECTION FUNCTIONALITY
 const discordOpen = document.getElementById('discord');
 discordOpen.addEventListener('click', function() {
