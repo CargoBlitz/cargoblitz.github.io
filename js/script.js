@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const findVisibleSection = () => {
         let visibleSectionId = null;
-        let minDistance = window.innerHeight; // Initialize with a large value
+        let minDistance = window.innerHeight;
 
         document.querySelectorAll('.section').forEach(section => {
             const rect = section.getBoundingClientRect();
@@ -144,17 +144,9 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     };
-
-    // Initial activation based on current scroll position
     updateActiveSection();
-
-    // Update active section on popstate (e.g., when the user navigates back)
     window.addEventListener('popstate', updateActiveSection);
-
-    // Ensure correct active link on page load/reload
     window.addEventListener('load', updateActiveSection);
-
-    // Set the correct active link on page load
     const visibleSectionId = findVisibleSection();
     if (visibleSectionId) {
         navLinks.forEach(link => {
@@ -164,7 +156,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
-
 //DIALOG
 const buttons = document.querySelectorAll('.cta');
 let openDialog = null;
