@@ -112,7 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 activateLink(link);
                 setTimeout(() => {
                     pcScroll = false;
-                }, 1500);
+                }, 3500);
             }
         });
     });
