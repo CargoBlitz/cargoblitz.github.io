@@ -1,3 +1,7 @@
+// SCROLL TO TOP
+document.addEventListener('DOMContentLoaded', () => {
+    window.scrollTo(0, 0);
+});
 /* DARK / LIGHT MODES */
 let darkMode = localStorage.getItem('darkMode');
 const darkModeToggle = document.querySelector('#dark-mode-toggle');
@@ -63,6 +67,8 @@ darkModeToggleDesktop.addEventListener('click', () => {
     }
 })
 // Bottom NAV MOBILE
+let pcScroll = false;
+
 document.addEventListener('DOMContentLoaded', () => {
     const navLinks = document.querySelectorAll('.bottom-bar-mobile ul li a');
 
@@ -75,7 +81,19 @@ document.addEventListener('DOMContentLoaded', () => {
         link.classList.add('active');
     };
 
-    // Smooth scroll to section when link is clicked
+    const findVisibleSection = () => {
+        let visibleSectionId = null;
+
+        document.querySelectorAll('.section').forEach(section => {
+            const rect = section.getBoundingClientRect();
+
+            if (rect.top >= 0 && rect.top <= window.innerHeight * 0.5) {
+                visibleSectionId = section.getAttribute('id');
+            }
+        });
+
+        return visibleSectionId;
+    };
     navLinks.forEach(link => {
         link.addEventListener('click', (event) => {
             event.preventDefault();
@@ -83,13 +101,29 @@ document.addEventListener('DOMContentLoaded', () => {
             const targetElement = document.getElementById(targetId);
 
             if (targetElement) {
+                pcScroll = true;
                 targetElement.scrollIntoView({ behavior: 'smooth' });
                 activateLink(link);
+                setTimeout(() => {
+                    pcScroll = false;
+                }, 1000);
             }
         });
     });
+    window.addEventListener('scroll', () => {
+        if (!pcScroll) {
+            const visibleSectionId = findVisibleSection();
 
-    // Update active section on page load
+            if (visibleSectionId) {
+                removeActiveClasses();
+                navLinks.forEach(link => {
+                    if (link.textContent.trim().toLowerCase() === visibleSectionId) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+        }
+    });
     const updateActiveSection = () => {
         const fromTop = window.scrollY + (window.innerHeight * 0.5);
 
@@ -103,20 +137,12 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     };
-
-    // Update active section on page load
     updateActiveSection();
-
-    // Update active section when scrolling
-    window.addEventListener('scroll', updateActiveSection);
-
-    // Update active section when navigating using browser back/forward buttons
     window.addEventListener('popstate', updateActiveSection);
+    if (navLinks.length > 0) {
+        navLinks[0].classList.add('active');
+    }
 });
-
-
-
-
 //DIALOG
 const buttons = document.querySelectorAll('.cta');
 let openDialog = null;

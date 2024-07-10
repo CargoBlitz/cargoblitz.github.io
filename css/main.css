@@ -205,7 +205,6 @@ html {
     border-radius: 10px;
     transition: width 0.3s ease, left 0.3s ease;
 }
-.bottom-bar-mobile ul li a:hover::after,
 .bottom-bar-mobile ul li .active::after {
     left: -10%;
     width: 120%;
