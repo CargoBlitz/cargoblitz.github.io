@@ -221,3 +221,8 @@ const discordOpen = document.getElementById('discord');
 discordOpen.addEventListener('click', function() {
     window.location.href = 'https://discord.com/invite/xPpfPDBH';
 })
+function sendEmail() {
+    var emailAddress = "mauro@devteamit.com";
+    var mailtoLink = "mailto:" + emailAddress;
+    window.location.href = mailtoLink;
+}
