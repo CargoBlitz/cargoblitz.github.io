@@ -132,7 +132,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     const updateActiveSection = () => {
-        const fromTop = window.scrollY + (window.innerHeight * 0.5);
+        const fromTop = window.scrollY + (window.innerHeight * 0.3);
 
         document.querySelectorAll('.section').forEach(section => {
             if (section.offsetTop <= fromTop && section.offsetTop + section.offsetHeight > fromTop) {
