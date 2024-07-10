@@ -1,7 +1,7 @@
 // SCROLL TO TOP
-document.addEventListener('DOMContentLoaded', () => {
+/*document.addEventListener('DOMContentLoaded', () => {
     window.scrollTo(0, 0);
-});
+});*/
 /* DARK / LIGHT MODES */
 let darkMode = localStorage.getItem('darkMode');
 const darkModeToggle = document.querySelector('#dark-mode-toggle');
@@ -83,17 +83,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const findVisibleSection = () => {
         let visibleSectionId = null;
+        let minDistance = window.innerHeight; // Initialize with a large value
 
         document.querySelectorAll('.section').forEach(section => {
             const rect = section.getBoundingClientRect();
 
-            if (rect.top >= 0 && rect.top <= window.innerHeight * 0.5) {
-                visibleSectionId = section.getAttribute('id');
+            if (rect.top >= 0 && rect.top <= window.innerHeight * 0.3) {
+                const distance = Math.abs(rect.top);
+                if (distance < minDistance) {
+                    minDistance = distance;
+                    visibleSectionId = section.getAttribute('id');
+                }
             }
         });
 
         return visibleSectionId;
     };
+
     navLinks.forEach(link => {
         link.addEventListener('click', (event) => {
             event.preventDefault();
@@ -110,20 +116,21 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
     window.addEventListener('scroll', () => {
         if (!pcScroll) {
             const visibleSectionId = findVisibleSection();
 
             if (visibleSectionId) {
-                removeActiveClasses();
                 navLinks.forEach(link => {
                     if (link.textContent.trim().toLowerCase() === visibleSectionId) {
-                        link.classList.add('active');
+                        activateLink(link);
                     }
                 });
             }
         }
     });
+
     const updateActiveSection = () => {
         const fromTop = window.scrollY + (window.innerHeight * 0.5);
 
@@ -137,12 +144,27 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     };
+
+    // Initial activation based on current scroll position
     updateActiveSection();
+
+    // Update active section on popstate (e.g., when the user navigates back)
     window.addEventListener('popstate', updateActiveSection);
-    if (navLinks.length > 0) {
-        navLinks[0].classList.add('active');
+
+    // Ensure correct active link on page load/reload
+    window.addEventListener('load', updateActiveSection);
+
+    // Set the correct active link on page load
+    const visibleSectionId = findVisibleSection();
+    if (visibleSectionId) {
+        navLinks.forEach(link => {
+            if (link.textContent.trim().toLowerCase() === visibleSectionId) {
+                activateLink(link);
+            }
+        });
     }
 });
+
 //DIALOG
 const buttons = document.querySelectorAll('.cta');
 let openDialog = null;
